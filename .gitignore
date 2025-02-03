@@ -38,3 +38,5 @@ logs/
 # Ollama model files and cache
 models/
 .cache/ 
+
+lib/
