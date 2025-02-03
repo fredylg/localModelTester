@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .interface {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9f7ef;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="interface">
+        <h1>AI Interface</h1>
+        <textarea id="userInput" placeholder="Enter your prompt 
+here..."></textarea>
+        <button class="submit-btn" 
+onclick="processUserInput()">Process</button>
+        <div class="result" id="resultOutput"></div>
+    </div>
+
+    <script>
+        function processUserInput() {
+            const userInput = document.getElementById('userInput').value;
+            // Implement your Ollama API call here
+            // For example:
+            // endpoint = "http://localhost:11434/api/v1/chat/completions"
+            // payload = {"model":"gpt-3.5-turbo", "messages": [{"role": 
+"system", "content": "You are a helpful AI assistant"}], "prompt": 
+userInput}
+            
+            // Simulate API response (replace with actual implementation)
+            const resultDiv = document.getElementById('resultOutput');
+            resultDiv.innerHTML = "Processing your input...";
+            
+            setTimeout(() => {
+                resultDiv.innerHTML = "AI Response: This is a simulated 
+response.";
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
